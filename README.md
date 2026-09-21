@@ -17,9 +17,9 @@ sudo nmap -sV < ip-адрес >
 В качестве ответа пришлите события, которые попали в логи Suricata и Fail2Ban, прокомментируйте результат.
 ### Ответ:
 Suricata обнаружила все сканирования, кроме TCP ACK (-sA) сканирования. Данный вид сканирования используется для определения фильтрации и выполняется без установления соединения.
-![Логи Suricata](ссылка на скриншот 1)
+![Логи Suricata](https://github.com/SkebaX/13-03-hw/blob/main/Screenshots/Suricata%20task%201.png)
 Fail2Ban не обнаружил не одного сканирования, так как при сканировании не выполнялся процесс аутентификации.
-![Логи Fail2Ban](ссылка на скриншот 1)
+![Логи Fail2Ban](https://github.com/SkebaX/13-03-hw/blob/main/Screenshots/Fail2ban%20task%201.png)
 
 ---
 
@@ -43,6 +43,6 @@ hydra -L users.txt -P pass.txt < ip-адрес > ssh
 ### Ответ:
 Fail2Ban успешно заблокировал IP-адрес атакующей машины. В логах Fail2Ban были обнаружены записи о блокировке IP-адреса. Suricata обнаружила трафик, похожий на сканер SSH, и зарегистрировала события ET SCAN Potential SSH Scan и SURICATA STREAM excessive retransmissions.
 
-![Логи Fail2Ban](ссылка на скриншот 2)
-![Логи Suricata](ссылка на скриншот 2)
+![Логи Fail2Ban](https://github.com/SkebaX/13-03-hw/blob/09bf8d7f5c7988cfd994c1376ae50721a94aebf8/Screenshots/Fail2ban%20task%202.png)
+![Логи Suricata](https://github.com/SkebaX/13-03-hw/blob/09bf8d7f5c7988cfd994c1376ae50721a94aebf8/Screenshots/Suricata%20task%202.png)
 
